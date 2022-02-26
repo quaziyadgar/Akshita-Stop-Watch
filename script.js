@@ -29,12 +29,13 @@ function addLap()
         minute.innerText = '00';
         second.innerText = '00';
         document.getElementById('lap-frame').innerText = "";
+        startBtn.style.backgroundColor = 'green';
     }
     else{
     console.log("lap")
     lap++;   
     var div = document.createElement('div');
-    div.innerHTML = `<div id="btn-ctrl">
+    div.innerHTML = `<div class="lap-ctrl">
                 <div>Lap ${lap}</div>
                 <div>${h}:${m}:${s}</div>
                 </div>`;
@@ -47,7 +48,8 @@ function startTime()
 
     if(c==0){
         x = setInterval(function(){timeCounter();},1000);
-        startBtn.innerText = "Stop"; 
+        startBtn.innerText = "Stop";
+        startBtn.style.backgroundColor = 'red';
         c++;
     }
     else
