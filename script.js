@@ -51,9 +51,12 @@ function startTime()
         startBtn.innerText = "Stop";
         startBtn.style.backgroundColor = 'red';
         c++;
+        lapBtn.innerText = "Lap";
     }
     else
-    {
+    {   startBtn.innerText = "Start";
+        startBtn.style.backgroundColor = 'green';
+        c = 0;
         clearInterval(x);
         lapBtn.innerText = "Reset";
     }
