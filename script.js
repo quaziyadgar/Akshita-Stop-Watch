@@ -15,6 +15,22 @@ lapBtn.addEventListener('click', addLap);
 
 function addLap()
 {
+    if (lapBtn.innerText == 'Reset')
+    {
+        console.log("reset");
+        h = 0;
+        m = 0;
+        s = 0;
+        c = 0;
+        lap = 0;
+        lapBtn.innerText = 'Lap';
+        startBtn.innerText = 'Start';
+        hour.innerText = '00';
+        minute.innerText = '00';
+        second.innerText = '00';
+        document.getElementById('lap-frame').innerText = "";
+    }
+    else{
     console.log("lap")
     lap++;   
     var div = document.createElement('div');
@@ -22,7 +38,8 @@ function addLap()
                 <div>Lap ${lap}</div>
                 <div>${h}:${m}:${s}</div>
                 </div>`;
-    document.getElementById('watch-frame').appendChild(div);
+    document.getElementById('lap-frame').appendChild(div);
+    }
 }
 
 function startTime()
