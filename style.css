@@ -1,0 +1,27 @@
+
+#watch-frame{
+    width: 400px;
+    margin: 100px auto;
+    border: 2px solid black;
+    padding: 20px;
+    
+}
+#time{
+    display: flex;
+    justify-content: center;
+    
+}
+#time span{
+    display: flex;
+}
+#btn-ctrl{
+    display: flex;
+    justify-content: space-between;
+}
+#btn-ctrl button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
